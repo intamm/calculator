@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.percent.PercentRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".MainActivity"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:id="@+id/board00">
+
+        <Button
+            android:id="@+id/buttonSIN"
+            app:layout_widthPercent="20%"
+            app:layout_heightPercent="20%"
+            android:text="@string/button_sin"
+            android:onClick="buttonClicked"
+            style="@style/button_extra"/>
+        <Button
+            android:id="@+id/buttonCOS"
+            app:layout_widthPercent="20%"
+            app:layout_heightPercent="20%"
+            android:layout_below="@id/buttonSIN"
+            android:text="@string/button_cos"
+            android:onClick="buttonClicked"
+            style="@style/button_extra"/>
+        <Button
+            android:id="@+id/buttonSQRT"
+            app:layout_widthPercent="20%"
+            app:layout_heightPercent="20%"
+            android:layout_below="@id/buttonCOS"
+            android:text="@string/button_sqrt"
+            android:onClick="buttonClicked"
+            style="@style/button_extra"/>
+        <Button
+            android:id="@+id/buttonPI"
+            app:layout_widthPercent="20%"
+            app:layout_heightPercent="20%"
+            android:layout_below="@id/buttonSQRT"
+            android:text="@string/button_pi"
+            android:onClick="buttonClicked"
+            style="@style/button_extra"/>
+        <Button
+            android:id="@+id/buttonE"
+            app:layout_widthPercent="20%"
+            app:layout_heightPercent="20%"
+            android:layout_below="@id/buttonPI"
+            android:text="@string/button_e"
+            android:onClick="buttonClicked"
+            style="@style/button_extra"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <include layout="@layout/board_port"/>
+    </RelativeLayout>
+
+</LinearLayout>
